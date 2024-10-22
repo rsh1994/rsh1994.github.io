@@ -1,9 +1,0 @@
----
-title: "첫번째"
-date: "2024-10-22"
-categories: ["React", "JavaScript"]
----
-
-# My First Post
-
-This is the content of my first post...
