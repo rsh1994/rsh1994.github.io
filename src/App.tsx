@@ -1,15 +1,16 @@
+// src/App.tsx
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
-import PostDetail from './components/Blog/PostDetail';
 import Portfolio from './pages/Portfolio';
 import About from './pages/About';
+import PostDetail from './components/Blog/PostDetail';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <BrowserRouter basename="/my-tech-blog">
+    <Router>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,8 +20,8 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </Router>
   );
-}
+};
 
 export default App;
