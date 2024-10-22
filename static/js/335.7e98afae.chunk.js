@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_tech_blog=self.webpackChunkmy_tech_blog||[]).push([[335],{1335:(e,s,t)=>{e.exports=t.p+"static/media/2024-10-22-first.b59fe519d63045c7fa83.md"}}]);
