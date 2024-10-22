@@ -1,4 +1,11 @@
 /*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+/*!
  * is-extendable <https://github.com/jonschlinkert/is-extendable>
  *
  * Copyright (c) 2015, Jon Schlinkert.
@@ -11,6 +18,8 @@
  * Copyright (c) 2015, 2017, Jon Schlinkert.
  * Released under the MIT License.
  */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
 /**
  * @license React
