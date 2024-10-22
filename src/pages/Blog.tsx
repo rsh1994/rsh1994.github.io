@@ -1,8 +1,10 @@
 // src/pages/Blog.tsx
+import { SEO } from '../components/SEO';
 import React, { useEffect, useState, useMemo } from 'react';
 import PostList from '../components/Blog/PostList';
 import { Post } from '../types';
 import { getAllPosts } from '../utils/mdUtils';
+
 
 const Blog: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -44,7 +46,26 @@ const Blog: React.FC = () => {
     loadPosts();
   }, []);
 
+    // SEO 메타데이터 준비
+    const seoTitle = selectedCategory 
+    ? `${selectedCategory} 관련 포스트 | RSH Tech Blog`
+    : 'RSH Tech Blog | 기술 블로그';
+
+  const seoDescription = selectedCategory
+    ? `${selectedCategory} 관련 기술 포스트 모음입니다. 백엔드 개발과 데이터 엔지니어링 경험을 공유합니다.`
+    : '백엔드 개발, 데이터 엔지니어링, 클라우드 아키텍처에 대한 실무 경험과 기술적 인사이트를 공유하는 블로그입니다.';
+
+  const seoKeywords = selectedCategory
+    ? `${selectedCategory}, 기술블로그, 개발블로그, Backend, Data Engineering`
+    : categories.map(cat => cat.name).join(', ') + ', 기술블로그, 개발블로그';
+
   return (
+    <>
+      <SEO 
+        title={seoTitle}
+        description={seoDescription}
+        keywords={seoKeywords}
+      />    
     <div className="max-w-6xl mx-auto p-6">
       {/* <h1 className="text-3xl font-bold mb-8">Blog Posts</h1> */}
       <div className="flex gap-8">
@@ -105,6 +126,7 @@ const Blog: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

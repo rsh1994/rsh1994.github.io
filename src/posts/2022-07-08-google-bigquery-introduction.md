@@ -2,6 +2,7 @@
 title: "Google BigQuery 입문 가이드: 특징과 실습"
 date: "2022-07-08"
 categories: ["Cloud", "BigQuery", "Data Engineering"]
+keywords: ["Cloud", "BigQuery", "Data Engineering"]
 excerpt: "Google BigQuery의 기본 개념, 특징, 기존 빅데이터 플랫폼과의 차이점 및 실습 과정을 상세히 알아봅니다."
 ---
 

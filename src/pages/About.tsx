@@ -119,7 +119,7 @@ const About: React.FC = () => {
             {/* Backend Development */}
             <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center gap-2 mb-4">
-                <SiDjango className="text-green-500" />
+                <SiPython className="text-green-500" />
                 <h3 className="text-xl font-semibold">Backend Development</h3>
             </div>
             <div className="flex flex-wrap gap-2">

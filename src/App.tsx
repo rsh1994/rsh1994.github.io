@@ -7,20 +7,23 @@ import Blog from './pages/Blog';
 import Portfolio from './pages/Portfolio';
 import About from './pages/About';
 import PostDetail from './components/Blog/PostDetail';
+import { HelmetProvider } from 'react-helmet-async';
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<PostDetail />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<PostDetail />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </HelmetProvider>
   );
 };
 
