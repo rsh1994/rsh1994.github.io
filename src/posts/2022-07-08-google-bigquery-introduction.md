@@ -37,7 +37,7 @@ WHERE column_name LIKE '%search_string%'
   - 330 Gigabit 네트워크
 - 비용: 약 $20
 
-![BigQuery 성능 예시](../assets/images/bigquery/performance.png)
+![BigQuery 성능 예시](/images/bigquery/performance.png)
 
 ### 4. 데이터 안정성
 
@@ -77,7 +77,7 @@ WHERE column_name LIKE '%search_string%'
 ## 실습: BigQuery 시작하기
 
 1. Google Cloud 프로젝트 생성
-   ![프로젝트 생성](../assets/images/bigquery/create-project.png)
+   ![프로젝트 생성](/images/bigquery/create-project.png)
 
 2. BigQuery 콘솔 접속
 
@@ -96,7 +96,7 @@ LIMIT
   10
 ```
 
-![쿼리 결과](../assets/images/bigquery/query-result.png)
+![쿼리 결과](/images/bigquery/query-result.png)
 
 ## 결론
 

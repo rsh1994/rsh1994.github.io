@@ -46,7 +46,7 @@ const Blog: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-8">Blog Posts</h1>
+      {/* <h1 className="text-3xl font-bold mb-8">Blog Posts</h1> */}
       <div className="flex gap-8">
         {/* 사이드바 */}
         <div className="w-64 flex-shrink-0">

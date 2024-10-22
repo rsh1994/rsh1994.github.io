@@ -4,7 +4,7 @@ date: "2022-07-14"
 categories: ["Database", "PostgreSQL", "RDBMS"]
 excerpt: "PostgreSQL의 특징, 데이터 타입, 장단점 및 적절한 사용 사례에 대해 상세히 알아봅니다."
 ---
-![PostgreSQL](/..assets/images/postgresql/postgresql.png)
+![PostgreSQL](/images/postgresql/postgresql.png)
 
 ## 소개
 
