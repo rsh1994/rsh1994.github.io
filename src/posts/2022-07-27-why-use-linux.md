@@ -5,7 +5,7 @@ categories: ["OS", "Linux", "Ubuntu"]
 excerpt: "리눅스의 주요 특징, 사용해야 하는 10가지 이유, 그리고 Ubuntu 배포판에 대해 알아봅니다."
 ---
 
-![Linux](/images/linux/linux-logo.png)
+![Linux](/images/linux/linux-logo.jpeg)
 리눅스는 컴퓨터 운영체제의 한 종류이자 커널 자체를 의미합니다. 이 글에서는 리눅스의 특징과 사용해야 하는 이유, 그리고 대표적인 배포판인 Ubuntu에 대해 알아보겠습니다.
 
 ## 리눅스의 특징
