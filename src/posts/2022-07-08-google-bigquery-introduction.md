@@ -5,7 +5,7 @@ categories: ["Cloud", "BigQuery", "Data Engineering"]
 excerpt: "Google BigQuery의 기본 개념, 특징, 기존 빅데이터 플랫폼과의 차이점 및 실습 과정을 상세히 알아봅니다."
 ---
 
-![BigQuery](../assets/images/bigquery/bigquery.png)
+![BigQuery](/images/bigquery/bigquery.png)
 ## 빅쿼리(BigQuery)란?
 BigQuery는 페타바이트급의 데이터 저장 및 분석을 위한 구글의 클라우드 서비스입니다. 페타바이트급 Data Warehouse로서, 대규모 데이터를 저장하고 SQL을 통해 조회와 통계 작업을 수행할 수 있는 서비스입니다.
 
