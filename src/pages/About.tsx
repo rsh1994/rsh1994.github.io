@@ -3,8 +3,8 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { 
   SiPython, SiApachekafka, SiApachespark, SiGooglecloud, 
-  SiAmazon, SiDocker, SiDjango, SiSpring, SiReact,
-  SiTensorflow, SiFastapi
+  SiAmazon, SiDocker, SiDjango, SiReact,
+  SiTensorflow, SiFastapi, SiAmazonwebservices, SiMysql, 
 } from 'react-icons/si';
 
 const About: React.FC = () => {
@@ -74,8 +74,8 @@ const About: React.FC = () => {
         <div className="bg-white rounded-lg shadow-lg p-6 space-y-4">
           <p className="text-gray-700 leading-relaxed">
             데이터 엔지니어링과 백엔드 개발을 중심으로 활동하고 있으며, 효율적인 데이터 파이프라인 구축과 
-            시스템 최적화에 깊은 관심을 가지고 있습니다. 50여개 고객사의 데이터 처리 시스템을 구축하고 
-            관리한 경험을 바탕으로, 안정적이고 확장 가능한 시스템 설계에 전문성을 보유하고 있습니다.
+            시스템 최적화에 깊은 관심을 가지고 있습니다.
+            50여개 고객사의 데이터 처리 시스템을 구축하고 관리한 경험을 바탕으로, 안정적이고 확장 가능한 시스템 설계에 전문성을 보유하고 있습니다.
           </p>
           <p className="text-gray-700 leading-relaxed">
             최근에는 벡터 데이터베이스와 NLP 기술을 활용한 시멘틱 검색 시스템을 개발하며, 
@@ -119,7 +119,7 @@ const About: React.FC = () => {
             {/* Backend Development */}
             <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center gap-2 mb-4">
-                <SiSpring className="text-green-500" />
+                <SiDjango className="text-green-500" />
                 <h3 className="text-xl font-semibold">Backend Development</h3>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -134,7 +134,7 @@ const About: React.FC = () => {
             {/* Cloud & Infrastructure */}
             <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center gap-2 mb-4">
-                <SiAmazon className="text-orange-500" />
+                <SiGooglecloud className="text-orange-500" />
                 <h3 className="text-xl font-semibold">Cloud & Infrastructure</h3>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -167,12 +167,13 @@ const About: React.FC = () => {
       <section>
         <h2 className="text-2xl font-bold mb-6">Tech Stack</h2>
         <div className="grid grid-cols-4 md:grid-cols-6 gap-6 bg-white rounded-lg shadow-lg p-6">
-          <SiPython className="w-10 h-10 text-blue-500" />
-          <SiApachekafka className="w-10 h-10 text-red-500" />
-          <SiGooglecloud className="w-10 h-10 text-blue-600" />
-          <SiAmazon className="w-10 h-10 text-orange-500" />
-          <SiDjango className="w-10 h-10 text-green-600" />
-          <SiSpring className="w-10 h-10 text-green-500" />
+        <SiPython className="w-10 h-10 text-blue-500" title="Python"/>
+        <SiDjango className="w-10 h-10 text-green-600" title="Django"/>
+        <SiMysql className="w-10 h-10 text-blue-600" title="MySQL"/>
+        <SiGooglecloud className="w-10 h-10 text-blue-600" title="Google Cloud Platform"/>
+        <SiAmazon className="w-10 h-10 text-orange-500" title="Amazon Web Services"/>
+        <SiDocker className="w-10 h-10 text-blue-500" title="Docker"/>
+        <SiReact className="w-10 h-10 text-cyan-400" title="React"/>
         </div>
       </section>
     </div>
