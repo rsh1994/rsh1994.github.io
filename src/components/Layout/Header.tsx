@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 py-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-xl font-bold">
-            Tech Blog
+            데이터 전문가가 될테다
           </Link>
           <ul className="flex space-x-6">
             {navItems.map((item) => (

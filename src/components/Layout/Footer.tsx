@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
               <FaGithub className="text-xl" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:rsh1994@naver.com"
               className="text-gray-600 hover:text-gray-900 transition-colors"
               aria-label="Email Contact"
             >
@@ -42,18 +42,6 @@ const Footer: React.FC = () => {
               <FaLinkedin className="text-xl" />
             </a>
           </div>
-        </div>
-        <div className="text-center mt-4 text-sm text-gray-500">
-          This blog is open source. View the{' '}
-          <a
-            href="https://github.com/rsh1994/rsh1994.github.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            source code
-          </a>
-          .
         </div>
       </div>
     </footer>
