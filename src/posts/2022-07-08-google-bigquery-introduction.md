@@ -5,9 +5,7 @@ categories: ["Cloud", "BigQuery", "Data Engineering"]
 excerpt: "Google BigQuery의 기본 개념, 특징, 기존 빅데이터 플랫폼과의 차이점 및 실습 과정을 상세히 알아봅니다."
 ---
 
-# Google BigQuery 입문 가이드: 특징과 실습
-
-![BigQuery](/assets/images/bigquery/bigquery.png)
+![BigQuery](../assets/images/bigquery/bigquery.png)
 ## 빅쿼리(BigQuery)란?
 BigQuery는 페타바이트급의 데이터 저장 및 분석을 위한 구글의 클라우드 서비스입니다. 페타바이트급 Data Warehouse로서, 대규모 데이터를 저장하고 SQL을 통해 조회와 통계 작업을 수행할 수 있는 서비스입니다.
 
@@ -39,7 +37,7 @@ WHERE column_name LIKE '%search_string%'
   - 330 Gigabit 네트워크
 - 비용: 약 $20
 
-![BigQuery 성능 예시](/assets/images/bigquery/performance.png)
+![BigQuery 성능 예시](../assets/images/bigquery/performance.png)
 
 ### 4. 데이터 안정성
 
@@ -79,7 +77,7 @@ WHERE column_name LIKE '%search_string%'
 ## 실습: BigQuery 시작하기
 
 1. Google Cloud 프로젝트 생성
-   ![프로젝트 생성](/assets/images/bigquery/create-project.png)
+   ![프로젝트 생성](../assets/images/bigquery/create-project.png)
 
 2. BigQuery 콘솔 접속
 
@@ -98,7 +96,7 @@ LIMIT
   10
 ```
 
-![쿼리 결과](/assets/images/bigquery/query-result.png)
+![쿼리 결과](../assets/images/bigquery/query-result.png)
 
 ## 결론
 
