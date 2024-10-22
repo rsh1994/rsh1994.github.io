@@ -4,8 +4,8 @@ import { Post } from '../types';
 
 // 파일명에서 날짜와 슬러그를 추출하는 함수
 const parseFileName = (fileName: string) => {
-  // 2024-10-22-first.md -> ['2024-10-22', 'first']
-  const match = fileName.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.md$/);
+  // ./YYYY-MM-DD-title.md -> ['YYYY-MM-DD', 'title']
+  const match = fileName.match(/\.\/(\d{4}-\d{2}-\d{2})-(.+)\.md$/);
   if (!match) return null;
 
   return {
@@ -14,43 +14,34 @@ const parseFileName = (fileName: string) => {
   };
 };
 
-const getPosts = async () => {
-  // 파일 시스템에서 posts 디렉토리의 모든 .md 파일 가져오기
-  const files = require.context('../posts', false, /\.md$/);
-  const postsData: { [key: string]: any } = {};
-
-  files.keys().forEach((key) => {
-    const fileName = key.replace(/^\.\//, '');
-    const fileInfo = parseFileName(fileName);
-    if (fileInfo) {
-      postsData[fileInfo.slug] = {
-        content: files(key).default,
-        date: fileInfo.date
-      };
-    }
-  });
-
-  return postsData;
+// posts 디렉토리의 모든 .md 파일을 가져오기
+const getMDFiles = () => {
+  const context = require.context('../posts', false, /\.md$/);
+  return context.keys().map(key => ({
+    key,
+    content: context(key) as string,
+    ...parseFileName(key)!
+  }));
 };
 
 export const getPostData = async (slug: string): Promise<Post | null> => {
   try {
-    const posts = await getPosts();
-    const postData = posts[slug];
+    const files = getMDFiles();
+    const file = files.find(f => f.slug === slug);
     
-    if (!postData) {
+    if (!file) {
       throw new Error(`Post not found: ${slug}`);
     }
 
-    const { data, content } = matter(postData.content);
+    const { data, content } = matter(file.content);
     
     return {
       slug,
       title: data.title,
-      date: postData.date, // 파일명의 날짜 사용
+      date: file.date,
       categories: data.categories,
       excerpt: data.excerpt,
-      content: content
+      content
     };
   } catch (error) {
     console.error('Error loading post:', error);
@@ -60,23 +51,21 @@ export const getPostData = async (slug: string): Promise<Post | null> => {
 
 export const getAllPosts = async (): Promise<Post[]> => {
   try {
-    const posts = await getPosts();
-    const allPosts: Post[] = [];
-
-    for (const [slug, data] of Object.entries(posts)) {
-      const { data: frontMatter, content } = matter(data.content);
-      allPosts.push({
-        slug,
-        title: frontMatter.title,
-        date: data.date, // 파일명의 날짜 사용
-        categories: frontMatter.categories,
-        excerpt: frontMatter.excerpt,
+    const files = getMDFiles();
+    const posts = files.map(file => {
+      const { data, content } = matter(file.content);
+      return {
+        slug: file.slug,
+        title: data.title,
+        date: file.date,
+        categories: data.categories,
+        excerpt: data.excerpt,
         content
-      });
-    }
+      };
+    });
 
     // 날짜순 정렬
-    return allPosts.sort((a, b) => 
+    return posts.sort((a, b) => 
       new Date(b.date).getTime() - new Date(a.date).getTime()
     );
   } catch (error) {

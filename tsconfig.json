@@ -23,5 +23,6 @@
   },
   "include": [
     "src"
-, "config-overrides.js"  ]
+    ,"src/custom.d.ts" 
+  ]
 }
